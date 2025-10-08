@@ -6,30 +6,39 @@ public class movingPhysics : MonoBehaviour
 {
     public Rigidbody2D theRB;
 
+    public float MovementSpeed = 5.0f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     { 
-        Rigidbody2D Steve = gameObject.GetComponent<Rigidbody2D>();
+        //Rigidbody2D Steve = gameObject.GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
+        MoveLeftAndRight();
+        Jump();
+    }
+
+    public void MoveLeftAndRight()
+    {
+        if (Input.GetKey(KeyCode.RightArrow) == true )
         {
-            theRB.linearVelocity = Vector2.right * 5;
+            theRB.linearVelocity = Vector2.right * MovementSpeed;
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow) == true)
         {
-            theRB.linearVelocity = Vector2.left * 5;
+            theRB.linearVelocity = Vector2.left * MovementSpeed;
         }
+    }
 
-        if (Input.GetKey(KeyCode.UpArrow))
+    public void Jump()
+    {
+        if (Input.GetKeyDown(KeyCode.UpArrow) == true)
         {
             theRB.AddForce(Vector2.up * 20);
         }
-
-
     }
 }
