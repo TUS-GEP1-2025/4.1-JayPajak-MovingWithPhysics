@@ -7,6 +7,7 @@ public class movingPhysics : MonoBehaviour
     public Rigidbody2D theRB;
 
     public float MovementSpeed = 5.0f;
+    public float JumpForce = 200.0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,7 +39,7 @@ public class movingPhysics : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.UpArrow) == true)
         {
-            theRB.AddForce(Vector2.up * 20);
+            theRB.AddForce(Vector2.up * 200);
         }
     }
 }

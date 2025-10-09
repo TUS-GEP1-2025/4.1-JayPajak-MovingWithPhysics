@@ -459,6 +459,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7748644599447845663, guid: c6c268ad0658d204eae3f73520a79e4d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1720852848826391286}
+    - targetCorrespondingSourceObject: {fileID: 7748644599447845663, guid: c6c268ad0658d204eae3f73520a79e4d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1720852848826391288}
   m_SourcePrefab: {fileID: 100100000, guid: c6c268ad0658d204eae3f73520a79e4d, type: 3}
 --- !u!1 &1720852848826391285 stripped
 GameObject:
@@ -499,7 +502,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.1186973, y: 0.47130322}
+  m_Offset: {x: -1.1186973, y: 1.3677613}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -509,7 +512,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.0621498, y: 3.3099036}
+  m_Size: {x: 1.0621498, y: 1.1344993}
   m_EdgeRadius: 0
 --- !u!50 &1720852848826391287
 Rigidbody2D:
@@ -538,6 +541,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1720852848826391288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720852848826391285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499b4567f09d97f4a9285836bbab3249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theRB: {fileID: 1720852848826391287}
+  MovementSpeed: 5
+  JumpForce: 200
 --- !u!1001 &2962694799989930544
 PrefabInstance:
   m_ObjectHideFlags: 0
