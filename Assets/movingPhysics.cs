@@ -35,7 +35,7 @@ public class movingPhysics : MonoBehaviour
             theRB.linearVelocity = Vector2.right * MovementSpeed;
         }
 
-        if (Input.GetKey(KeyCode.LeftArrow) == true)
+        else if (Input.GetKey(KeyCode.LeftArrow) == true)
         {
             theRB.linearVelocity = Vector2.left * MovementSpeed;
         }
@@ -44,9 +44,9 @@ public class movingPhysics : MonoBehaviour
 
     public void Jump()
     {
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.UpArrow) == true)
+        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) == true)
         {
-            theRB.AddForce(Vector2.up * 200);
+            theRB.AddForce(Vector2.up * JumpForce);
         }
     }
 

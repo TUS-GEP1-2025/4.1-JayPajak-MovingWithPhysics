@@ -3,6 +3,9 @@ using UnityEngine;
 public class SwitchController : MonoBehaviour
 {
     public bool switchActive;
+    public SpriteRenderer theSR;
+    public radioController theRadio;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -12,7 +15,7 @@ public class SwitchController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        SpriteRenderer();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -28,6 +31,19 @@ public class SwitchController : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             switchActive = false;
+        }
+    }
+
+   public void SpriteRenderer()
+    {
+        if (switchActive == true && Input.GetKeyDown(KeyCode.UpArrow) == true)
+        {
+            theSR.color = Color.green;
+        }
+
+        if (switchActive == true && Input.GetKeyDown(KeyCode.DownArrow) == true)
+        {
+            theSR.color = Color.red;
         }
     }
 }
