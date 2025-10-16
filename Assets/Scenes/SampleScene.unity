@@ -1278,6 +1278,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theAudioSource: {fileID: 697596122}
+  playList:
+  - {fileID: 8300000, guid: 66bb7cdff89a95647822ec05afff4529, type: 3}
+  - {fileID: 8300000, guid: 2e757ce5530dbfd47ba7f14ad0afe45c, type: 3}
+  - {fileID: 8300000, guid: 2bede97e658fb1945a5eef77ffb20404, type: 3}
+  - {fileID: 8300000, guid: 8c0dffb2d1ec98548a997c6953de6004, type: 3}
+  songIndex: 0
 --- !u!114 &697596124
 MonoBehaviour:
   m_ObjectHideFlags: 0

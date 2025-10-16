@@ -1,9 +1,12 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class radioController : MonoBehaviour
 
 {
     public AudioSource theAudioSource;
+    public List<AudioClip> playList = new List<AudioClip>();
+    public int songIndex = 0;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -14,14 +17,18 @@ public class radioController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        PlayNextSong();
+       
     }
 
     public void PlayNextSong()
     {
-        if (Input.GetKeyDown(KeyCode.UpArrow) == true)
-        {
+            theAudioSource.clip = playList[songIndex];
             theAudioSource.Play();
+            songIndex++;
+
+        if(songIndex == 4)
+        {
+            songIndex = 0;
         }
     }
 }

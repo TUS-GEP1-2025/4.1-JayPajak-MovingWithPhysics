@@ -15,7 +15,16 @@ public class SwitchController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        SpriteRenderer();
+        if (switchActive == true && Input.GetKeyDown(KeyCode.UpArrow) == true)
+        {
+            theSR.color = Color.green;
+            theRadio.PlayNextSong();
+        }
+
+        if (switchActive == true && Input.GetKeyDown(KeyCode.DownArrow) == true)
+        {
+            theSR.color = Color.red;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,16 +43,4 @@ public class SwitchController : MonoBehaviour
         }
     }
 
-   public void SpriteRenderer()
-    {
-        if (switchActive == true && Input.GetKeyDown(KeyCode.UpArrow) == true)
-        {
-            theSR.color = Color.green;
-        }
-
-        if (switchActive == true && Input.GetKeyDown(KeyCode.DownArrow) == true)
-        {
-            theSR.color = Color.red;
-        }
-    }
 }
