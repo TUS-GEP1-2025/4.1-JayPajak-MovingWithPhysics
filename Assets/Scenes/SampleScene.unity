@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switchActive: 0
   theSR: {fileID: 740376275}
-  theRadio: {fileID: 0}
+  theRadio: {fileID: 697596123}
 --- !u!212 &740376275 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1815242796431726423, guid: 0292e602f5533c8449291cfc14828bbd, type: 3}
