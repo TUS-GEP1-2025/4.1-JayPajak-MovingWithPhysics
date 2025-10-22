@@ -13,6 +13,8 @@ public class movingPhysics : MonoBehaviour
 
     public AudioSource theAudioSource;
 
+    public Animator theAnimator;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -30,14 +32,30 @@ public class movingPhysics : MonoBehaviour
 
     public void MoveLeftAndRight()
     {
-        if (Input.GetKey(KeyCode.RightArrow) == true )
+        if (Input.GetKey(KeyCode.RightArrow) == true && isGrounded)
         {
             theRB.linearVelocity = Vector2.right * MovementSpeed;
+            theAnimator.SetFloat("walkSpeed", MovementSpeed);
+            Vector3 theScale = transform.localScale;
+            theScale.x = 1;
+            transform.localScale = theScale;
         }
 
-        else if (Input.GetKey(KeyCode.LeftArrow) == true)
+        else if (Input.GetKey(KeyCode.LeftArrow) == true && isGrounded)
         {
             theRB.linearVelocity = Vector2.left * MovementSpeed;
+            theAnimator.SetFloat("walkSpeed", MovementSpeed);
+            Vector3 theScale = transform.localScale;
+            theScale.x = -1;
+            transform.localScale = theScale;
+
+        }
+
+        else if (isGrounded)
+        {
+            theRB.linearVelocity = new Vector2(0, theRB.linearVelocity.y);
+            theAnimator.SetFloat("walkSpeed", 0);
+
         }
 
     }
@@ -47,6 +65,9 @@ public class movingPhysics : MonoBehaviour
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) == true)
         {
             theRB.AddForce(Vector2.up * JumpForce);
+            isGrounded = false;
+            theAnimator.SetBool("Jump", true);
+
         }
     }
 
@@ -55,6 +76,8 @@ public class movingPhysics : MonoBehaviour
         if (collision.gameObject.name == "GroundPlatform")
         {
             isGrounded = true;
+            theAnimator.SetBool("Jump", false);
+
         }
 
         if (collision.gameObject.tag == "Wall")
