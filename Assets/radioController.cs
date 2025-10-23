@@ -31,4 +31,10 @@ public class radioController : MonoBehaviour
             songIndex = 0;
         }
     }
+
+
+    public void StopPlayingSong()
+    {
+        theAudioSource.Stop();
+    }
 }

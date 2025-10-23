@@ -60,6 +60,11 @@ public class movingPhysics : MonoBehaviour
 
     }
 
+    public void FlipSwitch()
+    {
+        theAnimator.SetTrigger("Switch");
+    }
+
     public void Jump()
     {
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space) == true)

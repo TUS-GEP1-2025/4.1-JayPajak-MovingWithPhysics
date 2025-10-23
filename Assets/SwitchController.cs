@@ -5,6 +5,7 @@ public class SwitchController : MonoBehaviour
     public bool switchActive;
     public SpriteRenderer theSR;
     public radioController theRadio;
+    public movingPhysics theMC;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -19,11 +20,15 @@ public class SwitchController : MonoBehaviour
         {
             theSR.color = Color.green;
             theRadio.PlayNextSong();
+            theMC.FlipSwitch();
         }
 
         if (switchActive == true && Input.GetKeyDown(KeyCode.DownArrow) == true)
         {
             theSR.color = Color.red;
+            theMC.FlipSwitch();
+            theRadio.StopPlayingSong();
+           
         }
     }
 

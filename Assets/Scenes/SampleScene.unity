@@ -1299,6 +1299,7 @@ MonoBehaviour:
   switchActive: 0
   theSR: {fileID: 697596125}
   theRadio: {fileID: 697596123}
+  theMC: {fileID: 0}
 --- !u!212 &697596125 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 7179711476628266035, guid: 13202c7b958e2d340a7ae83dc2e8259e, type: 3}
@@ -1479,6 +1480,7 @@ MonoBehaviour:
   switchActive: 0
   theSR: {fileID: 740376275}
   theRadio: {fileID: 697596123}
+  theMC: {fileID: 1720852848826391288}
 --- !u!212 &740376275 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1815242796431726423, guid: 0292e602f5533c8449291cfc14828bbd, type: 3}
@@ -2637,11 +2639,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1349335357843813954, guid: c6c268ad0658d204eae3f73520a79e4d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.09
+      value: 0.09000003
       objectReference: {fileID: 0}
     - target: {fileID: 1349335357843813954, guid: c6c268ad0658d204eae3f73520a79e4d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.18
+      value: -1.82
       objectReference: {fileID: 0}
     - target: {fileID: 1349335357843813954, guid: c6c268ad0658d204eae3f73520a79e4d, type: 3}
       propertyPath: m_LocalPosition.z
